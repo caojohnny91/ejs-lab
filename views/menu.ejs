@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <h2>Mains</h2>
+    <ul>
+    <% menu.forEach((item, index) => { %>
+       <% if (item.category === 'mains') { %>
+        <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+            item.details %></li>
+       <% }%>
+    <% }); %>   
+</ul>
+
+    <h2>Sides</h2>
+    <ul>
+        <% menu.forEach((item, index) => { %>
+           <% if (item.category === 'sides') { %>
+            <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+                item.details %></li>
+               <% }%>
+        <% }); %>   
+    </ul>
+    
+    <h2>Desserts</h2>
+    <ul>
+        <% menu.forEach((item, index) => { %>
+           <% if (item.category === 'desserts') { %>
+            <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+                item.details %></li>
+               <% }%>
+        <% }); %>   
+    </ul>
+
+
+      
+    
+  </body>
+</html>
