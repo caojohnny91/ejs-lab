@@ -8,13 +8,25 @@
   <body>
     <%- include('./partials/nav') %>
 
+            <h1>Full Menu</h1>
+    <ul>
+        <% menu.forEach((item, index) => { %>
+            <li>
+                <b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+                item.details %>
+            </li>
+            <% }); %>
+          </ul>
+
     <h2>Mains</h2>
     <ul>
     <% menu.forEach((item, index) => { %>
        <% if (item.category === 'mains') { %>
-        <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
-            item.details %></li>
-       <% }%>
+        <li>
+            <b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+            item.details %>
+        </li>
+       <% }; %>
     <% }); %>   
 </ul>
 
@@ -22,9 +34,11 @@
     <ul>
         <% menu.forEach((item, index) => { %>
            <% if (item.category === 'sides') { %>
-            <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
-                item.details %></li>
-               <% }%>
+            <li>
+                <b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+                item.details %>
+            </li>
+               <% }; %>
         <% }); %>   
     </ul>
     
@@ -32,9 +46,11 @@
     <ul>
         <% menu.forEach((item, index) => { %>
            <% if (item.category === 'desserts') { %>
-            <li><b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
-                item.details %></li>
-               <% }%>
+            <li>
+                <b><%= item.name %>:</b> Price: <%= item.price %>, Rating: <%= item.rating %>, Details: <%=
+                item.details %>
+            </li>
+               <% }; %>
         <% }); %>   
     </ul>
 
